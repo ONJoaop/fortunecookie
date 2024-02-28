@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5% ;
+}
+
+
+body {
+    font-size: 1.6rem;
+    background: rgb(25,3,97);
+    background: linear-gradient(45deg, rgba(25,3,97,1) 0%, rgba(187,0,255,1) 100%) no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    display: none !important;
+}
+
+main {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: .5rem;
+    box-shadow:  0 2rem 5rem rgba(0, 0, 0, .8);
+    padding:  4.5rem 6.4rem;
+    width: 42.8rem;
+}
+
+/* .screen1 and .screen2*/
+.screen1,
+.screen2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen1 h2,
+.screen2 h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 1.4rem;
+    text-align: center;
+}
+
+
+/* Only .screen1 */
+.screen1 p{
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+#buttonOpenCookie {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Only .screen2 */
+
+.screen2 {
+    position: relative;
+}
+
+.container-fortune {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fortune {
+    background-color: #E4EDF1;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    box-shadow: .2rem .2rem .2rem #55555580;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.screen2 img {
+    margin: 6rem auto;
+}
+
+#buttonOpenAgain {
+    background-color: #FF9500;
+    padding: 1.5rem 1.4rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+
+
+
+/* Animations */
+
+
+
+/* .scree1 */
+#buttonOpenCookie:hover {
+    animation: cookieMoving;
+    animation-duration: .18s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cookieMoving {
+    0% {
+        transform: translateX(-2px);
+    }25%{
+        transform: translateY(-2px);
+        transform: rotateZ(2deg);
+    }50%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateY(2px);
+    }
+}
+
+
+
+
+/* .screen2 */
+.appear {
+    animation: appearFortune .8s ease-out ;
+}
+
+@keyframes appearFortune {
+    from {
+        transform: translateY(200px);
+        width: 15%;
+        height: 15%;
+        font-size: 8%;
+    }
+}
+
+
+
+
+/* body Backgorund */
+
+body {
+    animation: gradient 2s ease-in    ;
+}
+
+
+
